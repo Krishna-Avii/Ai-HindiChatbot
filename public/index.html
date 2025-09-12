@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>कृष्ण AI — हिन्दी चैटबॉट</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <div class="branding">
+        <div class="logo" aria-label="Krishn AI">
+          <svg class="logo-mark" width="44" height="44" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="pk1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#23c0ff"/>
+                <stop offset="100%" stop-color="#42e37b"/>
+              </linearGradient>
+              <linearGradient id="pk2" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#6b35ff"/>
+                <stop offset="100%" stop-color="#22d1ee"/>
+              </linearGradient>
+            </defs>
+            <path d="M40 90 C60 80 72 56 92 36" stroke="url(#pk2)" stroke-width="8" stroke-linecap="round"/>
+            <path d="M32 84 C58 70 76 44 104 24" stroke="url(#pk1)" stroke-width="6" stroke-linecap="round" opacity=".9"/>
+            <circle cx="86" cy="26" r="10" fill="#23c0ff"/>
+            <circle cx="86" cy="26" r="7" fill="#6b35ff"/>
+          </svg>
+          <span class="logo-text latin">कृष्ण <span class="ai">AI</span></span>
+        </div>
+        <div class="tagline" data-i18n="tagline">ज्ञान और तकनीक का संगम
+
+        </div>
+      </div>
+      <div class="theme-select">
+        <label for="lang" data-i18n="language_label">भाषा:</label>
+        <select id="lang" aria-label="Language">
+          <option value="hi">हिन्दी</option>
+          <option value="en">English</option>
+        </select>
+        <label for="theme" data-i18n="theme_label">थीम:</label>
+        <select id="theme">
+          <option value="utsav" data-i18n="theme_utsav">उत्सव (Celebratory)</option>
+          <option value="aadhunik" selected data-i18n="theme_modern">आधुनिक (Modern)</option>
+          <option value="paramparik" data-i18n="theme_classic">परम्परागत (Traditional)</option>
+        </select>
+        <button id="clear" type="button" title="इतिहास साफ़ करें" data-i18n="clear">साफ़</button>
+      </div>
+    </header>
+
+    <main class="chat">
+      <aside class="sidebar-fixed minimized" aria-label="इतिहास" data-i18n-attr="aria-label:sidebar_title">
+        <div class="sidebar-fixed-head" id="sidebar-toggle">
+          <span data-i18n="sidebar_title">इतिहास</span>
+          <button id="wipe-store" type="button" title="सभी इतिहास मिटाएँ" data-i18n="wipe_all">मिटाएँ</button>
+        </div>
+        <ul id="history-list"></ul>
+      </aside>
+      <div id="messages" class="messages" aria-live="polite"></div>
+    </main>
+
+    <footer class="composer">
+      <form id="chat-form">
+        <div class="input-wrap">
+          <button type="button" id="mic" aria-label="बोलकर लिखें" title="बोलकर लिखें" data-i18n-attr="aria-label:mic_label,title:mic_label">🎙️</button>
+          <input id="user-input" type="text" placeholder="अपना संदेश लिखें…" autocomplete="off" required data-i18n-attr="placeholder:input_placeholder" />
+        </div>
+        <button type="submit" data-i18n="send">भेजें</button>
+      </form>
+      <small class="hint" data-i18n="hint">सूचना: उत्तर स्वचालित रूप से हिन्दी में दिए जाते हैं।</small>
+    </footer>
+  </div>
+
+  <script src="/js/app.js" type="module"></script>
+</body>
+</html>

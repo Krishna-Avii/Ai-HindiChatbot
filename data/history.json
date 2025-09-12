@@ -1,0 +1,219 @@
+{
+  "e3184f70-11fc-4b70-9f9b-c911ab977973": [
+    {
+      "role": "user",
+      "content": "haridwar me kaun kaun si river hai"
+    },
+    {
+      "role": "assistant",
+      "content": "हरिद्वार में गंगा बहती है।  यह मुख्य नदी है। यमुना भी वहां मिलती है।  कुछ छोटी नदियाँ भी हैं।\n"
+    },
+    {
+      "role": "user",
+      "content": "haridwar me kaun kaun si river hai"
+    },
+    {
+      "role": "user",
+      "content": "badrinath kahan  h"
+    }
+  ],
+  "86311d0e-abe1-4b92-83a6-bed210192cc9": [
+    {
+      "role": "user",
+      "content": "greet me in english"
+    },
+    {
+      "role": "assistant",
+      "content": "हेलो!\n"
+    },
+    {
+      "role": "user",
+      "content": "greet me in english"
+    },
+    {
+      "role": "user",
+      "content": "change your response language into english"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello.\n"
+    }
+  ],
+  "227628cd-b2bc-4123-b53b-0c70757ece32": [
+    {
+      "role": "user",
+      "content": "tell me about Prahlad"
+    },
+    {
+      "role": "assistant",
+      "content": "प्रह्लाद भगवान विष्णु के भक्त थे।  उनकी दृढ़ता और आस्था की कहानी हिंदू धर्म में प्रेरणादायक है।  वे हिरण्यकश्यप के बेटे थे, जो भगवान विष्णु के शत्रु थे।\n"
+    },
+    {
+      "role": "user",
+      "content": "tell me about Prahlad"
+    },
+    {
+      "role": "user",
+      "content": "pralad ne bhakti kaise ki aur hum kaise kar sakte"
+    },
+    {
+      "role": "user",
+      "content": "tell me about Prahlad"
+    },
+    {
+      "role": "user",
+      "content": "pralad ne bhakti kaise ki aur hum kaise kar sakte"
+    },
+    {
+      "role": "user",
+      "content": "pralad ne bhakti kaise ki aur hum kaise kar sakte"
+    },
+    {
+      "role": "user",
+      "content": "tell me about Prahlad"
+    },
+    {
+      "role": "user",
+      "content": "pralad ne bhakti kaise ki aur hum kaise kar sakte"
+    },
+    {
+      "role": "user",
+      "content": "pralad ne bhakti kaise ki aur hum kaise kar sakte"
+    },
+    {
+      "role": "user",
+      "content": "mujhe kedarnath mandir ke bare me batao"
+    },
+    {
+      "role": "user",
+      "content": "tell me about Prahlad"
+    },
+    {
+      "role": "user",
+      "content": "pralad ne bhakti kaise ki aur hum kaise kar sakte"
+    },
+    {
+      "role": "user",
+      "content": "pralad ne bhakti kaise ki aur hum kaise kar sakte"
+    },
+    {
+      "role": "user",
+      "content": "mujhe kedarnath mandir ke bare me batao"
+    },
+    {
+      "role": "user",
+      "content": "pralad ne bhakti kaise ki aur hum kaise kar sakte"
+    },
+    {
+      "role": "assistant",
+      "content": "* प्रह्लाद ने ईश्वर में अटूट विश्वास, दृढ़ता और त्याग से भक्ति की।\n* हम भी प्रेम, श्रद्धा और निष्ठा से भक्ति कर सकते हैं, चाहे जो भी हमारे जीवन की परिस्थितियाँ हों।  सकारात्मक सोच और कर्मों से।\n* प्रह्लाद का उदाहरण हमारे लिए प्रेरणादायक है।\n\n* केदारनाथ मंदिर उत्तराखंड में स्थित एक प्रसिद्ध शिव मंदिर है।  यह हिंदू धर्म में बहुत महत्व रखता है।\n\n* प्रह्लाद एक हिंदू धार्मिक कथा का प्रसिद्ध पात्र है। उन्हें भगवान विष्णु का परम भक्त माना जाता है।  उनकी भक्ति और दृढ़ता की कहानी हमें प्रेरणा देती है।\n\n* प्रह्लाद ने भक्ति की, ईश्वर में दृढ़ विश्वास रखते हुए। हम भी, अपने विश्वास और कर्मों के द्वारा, भक्ति कर सकते हैं।  निष्ठा और धैर्य का पालन करें।\n"
+    },
+    {
+      "role": "user",
+      "content": "tell me about Prahlad"
+    },
+    {
+      "role": "user",
+      "content": "pralad ne bhakti kaise ki aur hum kaise kar sakte"
+    },
+    {
+      "role": "user",
+      "content": "pralad ne bhakti kaise ki aur hum kaise kar sakte"
+    },
+    {
+      "role": "user",
+      "content": "mujhe kedarnath mandir ke bare me batao"
+    },
+    {
+      "role": "user",
+      "content": "pralad ne bhakti kaise ki aur hum kaise kar sakte"
+    },
+    {
+      "role": "user",
+      "content": "आज हिंदी दिवस के बारे में कुछ बताओ"
+    },
+    {
+      "role": "assistant",
+      "content": "* हिंदी दिवस, हर साल, 14 सितंबर को मनाया जाता है।\n* यह दिन हिन्दी भाषा और साहित्य के प्रति सम्मान और स्नेह को दर्शाता है।\n* यह हमें हिंदी भाषा की महत्ता को याद दिलाता है।\n"
+    }
+  ],
+  "ce9be71d-ed57-411f-aed9-0edc9e107e93": [
+    {
+      "role": "user",
+      "content": "tell me about north korea"
+    },
+    {
+      "role": "user",
+      "content": "tell me about north korea"
+    },
+    {
+      "role": "user",
+      "content": "tell me about north korea"
+    },
+    {
+      "role": "assistant",
+      "content": "उत्तर कोरिया एक अलग देश है, जिसकी अपनी संस्कृति और इतिहास है।  वहाँ की अर्थव्यवस्था और राजनीति अन्य देशों से भिन्न हैं।  इसके बारे में जानने के लिए ज़्यादा जानकारी के लिए आप और शोध कर सकते हैं।\n"
+    }
+  ],
+  "7b2a1f86-a187-4295-96d0-011992611266": [
+    {
+      "role": "user",
+      "content": "mai bahaut sad hon happy hone ke liye kya karu"
+    },
+    {
+      "role": "assistant",
+      "content": "बाहर घूमने जाओ, किसी दोस्त से बात करो,  पसंदीदा काम करो, या  किताबें/फ़िल्में देखो।  ये छोटी-छोटी चीजें तेज़ी से  मज़ेदार  मौहौल बना सकती हैं।\n"
+    },
+    {
+      "role": "user",
+      "content": "mai bahaut sad hon happy hone ke liye kya karu"
+    },
+    {
+      "role": "user",
+      "content": "mazak kar rha tha iam very happy"
+    },
+    {
+      "role": "assistant",
+      "content": "ठीक है, खुशी की बात है!\n"
+    },
+    {
+      "role": "user",
+      "content": "mai bahaut sad hon happy hone ke liye kya karu"
+    },
+    {
+      "role": "user",
+      "content": "mazak kar rha tha iam very happy"
+    },
+    {
+      "role": "user",
+      "content": "mazak kar rha tha iam very happy"
+    },
+    {
+      "role": "assistant",
+      "content": "सहायक:  खुशी की बात है!  अपनी खुशी को बनाए रखो!\n"
+    }
+  ],
+  "4643b9f5-9dce-4ae2-901b-3f1e13df78d3": [
+    {
+      "role": "user",
+      "content": "hello"
+    },
+    {
+      "role": "assistant",
+      "content": "Hi.\n"
+    },
+    {
+      "role": "user",
+      "content": "hello"
+    },
+    {
+      "role": "user",
+      "content": "great rishu"
+    },
+    {
+      "role": "assistant",
+      "content": "वाह! शुभकामनाएँ!\n"
+    }
+  ],
+  "dd23e578-3cfa-4fc0-bcd2-55b8d508b57e": []
+}

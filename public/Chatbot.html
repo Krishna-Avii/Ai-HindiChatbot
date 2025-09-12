@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>कृष्ण AI — हिन्दी चैटबॉट</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Styling */
+    body {
+      font-family: 'Noto Sans Devanagari', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .app {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .app-header {
+      background: #0066cc;
+      color: white;
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #005bb5;
+    }
+
+    .branding .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-mark {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .logo-text {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .logo-text .ai {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+
+    .tagline {
+      font-style: italic;
+      font-size: 1rem;
+      margin-top: 5px;
+    }
+
+    .theme-select {
+      display: flex;
+      align-items: center;
+    }
+
+    .theme-select select,
+    .theme-select button {
+      margin-left: 10px;
+      padding: 5px 10px;
+      font-size: 0.9rem;
+    }
+
+    .chat {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      overflow: hidden;
+    }
+
+    .sidebar-fixed {
+      width: 240px;
+      background-color: #fff;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      top: 70px;
+      bottom: 0;
+      left: 0;
+      overflow-y: auto;
+      z-index: 2;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar-fixed.minimized {
+      left: -240px;
+    }
+
+    .sidebar-fixed-head {
+      background: #0066cc;
+      color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .messages {
+      flex-grow: 1;
+      padding: 20px;
+      overflow-y: auto;
+      background-color: #ffffff;
+    }
+
+    .composer {
+      background: #fff;
+      padding: 10px 20px;
+      border-top: 2px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .composer .input-wrap {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    .composer input {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 20px;
+      font-size: 1rem;
+      margin-right: 10px;
+      outline: none;
+    }
+
+    .composer button {
+      background-color: #0066cc;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+    }
+
+    .composer button:hover {
+      background-color: #005bb5;
+    }
+
+    .hint {
+      font-size: 0.8rem;
+      color: #555;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    /* Chat bubbles */
+    .message {
+      margin: 10px 0;
+    }
+
+    .user-message {
+      text-align: right;
+      background-color: #0066cc;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 20px;
+      max-width: 75%;
+      display: inline-block;
+    }
+
+    .bot-message {
+      text-align: left;
+      background-color: #f1f1f1;
+      color: #333;
+      padding: 8px 12px;
+      border-radius: 20px;
+      max-width: 75%;
+      display: inline-block;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .app-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .theme-select {
+        margin-top: 10px;
+      }
+
+      .sidebar-fixed {
+        width: 200px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .composer input {
+        font-size: 0.9rem;
+      }
+
+      .composer button {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app">
+    <header class="app-header">
+      <div class="branding">
+        <div class="logo" aria-label="Krishn AI">
+          <svg class="logo-mark" width="44" height="44" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="pk1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#23c0ff" />
+                <stop offset="100%" stop-color="#42e37b" />
+              </linearGradient>
+              <linearGradient id="pk2" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#6b35ff" />
+                <stop offset="100%" stop-color="#22d1ee" />
+              </linearGradient>
+            </defs>
+            <path d="M40 90 C60 80 72 56 92 36" stroke="url(#pk2)" stroke-width="8" stroke-linecap="round" />
+            <path d="M32 84 C58 70 76 44 104 24" stroke="url(#pk1)" stroke-width="6" stroke-linecap="round" opacity=".9" />
+            <circle cx="86" cy="26" r="10" fill="#23c0ff" />
+            <circle cx="86" cy="26" r="7" fill="#6b35ff" />
+          </svg>
+          <span class="logo-text latin">कृष्ण <span class="ai">AI</span></span>
+        </div>
+        <div class="tagline" data-i18n="tagline">ज्ञान और तकनीक का संगम</div>
+      </div>
+      <div class="theme-select">
+        <label for="lang" data-i18n="language_label">भाषा:</label>
+        <select id="lang" aria-label="Language">
+          <option value="hi">हिन्दी</option>
+          <option value="en">English</option>
+        </select>
+        <label for="theme" data-i18n="theme_label">थीम:</label>
+        <select id="theme">
+          <option value="utsav" data-i18n="theme_utsav">उत्सव (Celebratory)</option>
+          <option value="aadhunik" selected data-i18n="theme_modern">आधुनिक (Modern)</option>
+          <option value="paramparik" data-i18n="theme_classic">परम्परागत (Traditional)</option>
+        </select>
+        <button id="clear" type="button" title="इतिहास साफ़ करें" data-i18n="clear">साफ़</button>
+      </div>
+    </header>
+
+    <main class="chat">
+      <aside class="sidebar-fixed minimized" aria-label="इतिहास" data-i18n-attr="aria-label:sidebar_title">
+        <div class="sidebar-fixed-head" id="sidebar-toggle">
+          <span data-i18n="sidebar_title">इतिहास</span>
+          <button id="wipe-store" type="button" title="सभी इतिहास मिटाएँ" data-i18n="wipe_all">मिटाएँ</button>
+        </div>
+        <ul id="history-list"></ul>
+      </aside>
+      <div id="messages" class="messages" aria-live="polite"></div>
+    </main>
+
+    <footer class="composer">
+      <form id="chat-form">
+        <div class="input-wrap">
+          <button type="button" id="mic" aria-label="बोलकर लिखें" title="बोलकर लिखें" data-i18n-attr="aria-label:mic_label,title:mic_label">🎙️</button>
+          <input id="user-input" type="text" placeholder="अपना संदेश लिखें…" autocomplete="off" required data-i18n-attr="placeholder:input_placeholder" />
+        </div>
+        <button type="submit" data-i18n="send">भेजें</button>
+      </form>
+      <small class="hint" data-i18n="hint">सूचना: उत्तर स्वचालित रूप से हिन्दी में दिए जाते हैं।</small>
+    </footer>
+  </div>
+
+  <script src="/js/app.js" type="module"></script>
+</body>
+</html>
