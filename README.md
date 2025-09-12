@@ -10,7 +10,7 @@ Krishna AI — हिन्दी चैटबॉट (Hindi Diwas Special)
 OPENAI_API_KEY=your_key_here
 PORT=3000
 # MODEL=gpt-4o-mini
-GOOGLE_API_KEY=AIzaSyBA3-h523JvA1iDPMak75I2UBC5yKomyVU
+GOOGLE_API_KEY=
 ```
 
 चलाएँ
